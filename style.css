@@ -32,59 +32,52 @@ body {
 
 #info a::before {
 	content: "";
-	position: absolute;
 	height: 2px;
 	width: 100%;
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	background-color: #88c0d0;
-	visibility: hidden;
 	transform: scaleX(0);
 	transition: all 0.3s ease-in-out 0s;
+	visibility: hidden;
 }
 
 #info a:hover::before {
+	transform: scaleX(1);
 	visibility: visible;
-    transform: scaleX(1);
 }
 
 #links {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
 	height: 64px;
+	justify-content: center;
 }
 
 #links a {
-    height: 100%;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-.flip {
-    height: 100%;
-    width: 100%;
-    position: relative;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	margin-left: 12px;
+    margin-right: 12px;
     text-align: center;
-	transform-style: preserve-3d;
-	transition: transform 0.8s;
 }
 
-.flip:hover {
-	transform: rotateY(180deg);
-}
-
-.flip img {
+#links img {
     height: 100%;
 }
 
 .front {
-    backface-visibility: hidden;
+	transition: opacity 0.5s;
+}
+
+.front:hover {
+	opacity: 0;
 }
 
 .back {
-    backface-visibility: hidden;
     position: absolute;
-    left: 0;
-    transform: rotateY(180deg);
+	left: 0;
+	z-index: -1;
 }
