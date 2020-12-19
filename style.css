@@ -51,7 +51,7 @@ body {
 #links {
 	display: flex;
 	flex-direction: row;
-	height: 48px;
+	height: 56px;
 	justify-content: center;
 }
 
@@ -59,8 +59,8 @@ body {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	margin-left: 12px;
-	margin-right: 12px;
+	margin-left: 6px;
+	margin-right: 6px;
 	text-align: center;
 }
 
